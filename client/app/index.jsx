@@ -10,7 +10,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    axios.get('http://localhost:3000/api').then(res => this.setState({ msg: res.data.msg }))
+    axios.get('/api').then(res => this.setState({ msg: res.data.msg }))
   }
   render() {
     return (

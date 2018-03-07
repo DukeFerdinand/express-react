@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "yarn client",
-    "client": "webpack-dev-server",
+    "client": "webpack --watch",
     "build": "webpack",
     "server": "nodemon index.js",
     "app": "run-p -cln client server"
@@ -38,7 +38,6 @@
     "file-loader": "^1.1.11",
     "npm-run-all": "^4.1.2",
     "webpack": "^4.1.0",
-    "webpack-cli": "^2.0.10",
-    "webpack-dev-server": "^3.1.0"
+    "webpack-cli": "^2.0.10"
   }
 }
