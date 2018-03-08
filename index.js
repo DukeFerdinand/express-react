@@ -8,13 +8,15 @@ app.use(express.static(path.join(__dirname, 'dist/public')))
 app.use(cors())
 
 app.get('/api', (req, res) => {
-  res.send({
-    msg: 'Hello from your API!'
-  })
+  res.send({ msg: 'Hello from your API!' })
+})
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/public/index.html'))
 })
 
 // Useful if your hosting site uses a non-standard port
 const PORT = process.env.port || 3000
 
 // eslint-disable-next-line
-app.listen(3000, () => console.log(`Starting app on port ${PORT}`))
+app.listen(PORT, () => console.log(`Starting app on port ${PORT}`))
