@@ -4,10 +4,13 @@
 
 Contains the following packages:
 * Express
-* cors
 * React
 * Redux/Redux-Saga
 * axios
+
+Planned features:
+* MongoDB connection
+* Webpack build system
 
 Uses `webpack-dev-server` for development, `babel` for the build tool, and `eslint` for the linter (linting is very subjective, but I've included my personal `.eslintrc` based on the `airbnb` packages if you need one and don't mind).
 
