@@ -13,8 +13,14 @@ const config = {
     filename: 'bundle.js'
   },
   resolve: {
+    extensions: ['.js', '.jsx', '.es6'],
     alias: {
-      '@assets': path.resolve(__dirname, 'client/assets')
+      '@assets': path.join(__dirname, 'client/assets'),
+      '@components': path.join(__dirname, 'client/app/components'),
+      '@store': path.join(__dirname, 'client/app/store'),
+      '@reducers': path.join(__dirname, 'client/app/store/reducers'),
+      '@actions': path.join(__dirname, 'client/app/store/actions'),
+      '@sagas': path.join(__dirname, 'client/app/sagas'),
     }
   },
   devtool: 'inline-source-map',
