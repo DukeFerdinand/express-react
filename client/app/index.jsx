@@ -1,25 +1,20 @@
-import React, { Component } from 'react'
+import 'babel-polyfill'
+import React from 'react'
 import { render } from 'react-dom'
-import axios from 'axios'
+import { Provider } from 'react-redux'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      msg: 'Loading...'
-    }
-  }
-  componentDidMount() {
-    axios.get('/api').then(res => this.setState({ msg: res.data.msg }))
-  }
-  render() {
-    return (
-      <div>
-        <p> Hello from React!</p>
-        <p>{ this.state.msg }</p>
-      </div>
-    )
-  }
+import { store } from '@store/store'
+import App from './components/App'
+
+const Root = () => {
+  return (
+    <Provider store={store}>
+      <Router>
+        <Route path="/" exact component={App} />
+      </Router>
+    </Provider>
+  )
 }
 
-render(<App />, document.getElementById('app'))
+render(<Root />, document.getElementById('app'))
