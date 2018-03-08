@@ -2,7 +2,7 @@
 
 #### This is a VERY simple boilerplate I setup to save a bit of time with Webpack and ESLint. Doesn't contain a ton of bloated 'demo app' garbage, so it's pretty easy to get going.
 
-Contains the following packages (installed, but maybe not setup in-app yet):
+Contains the following packages:
 * Express
 * cors
 * React
@@ -18,8 +18,7 @@ Uses `webpack-dev-server` for development, `babel` for the build tool, and `esli
       * `$ (yarn or npm) install`
   3. Run the dev server
       * `$ yarn app` or `$ npm run app`
-      * Open your browser to http://localhost:8080 to see the client
-      * Or open your brower to http://localhost:3000/api to see an example API endpoint
+      * Open your browser to http://localhost:3000/ to see the client. **NOTE:** to see an example API response, go to http://localhost:3000/api. This is also visible on the root route in the client as `Hello from your API!`
 
 ### Creating a production build
 
