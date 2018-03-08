@@ -2,7 +2,7 @@
 const webpack = require('webpack')
 const path = require('path')
 
-const BUILD_DIR = path.resolve(__dirname, 'dist/public/assets')
+const BUILD_DIR = path.resolve(__dirname, 'public/assets')
 const APP_DIR = path.resolve(__dirname, 'client/app')
 
 const config = {

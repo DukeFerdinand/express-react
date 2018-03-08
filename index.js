@@ -4,7 +4,7 @@ const cors = require('cors')
 
 const app = express()
 
-app.use(express.static(path.join(__dirname, 'dist/public')))
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(cors())
 
 app.get('/api', (req, res) => {
@@ -12,7 +12,7 @@ app.get('/api', (req, res) => {
 })
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/public/index.html'))
+  res.sendFile(path.join(__dirname, 'public/index.html'))
 })
 
 // Useful if your hosting site uses a non-standard port
