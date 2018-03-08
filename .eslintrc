@@ -16,6 +16,7 @@
   },
   "rules": {
     "arrow-body-style": 0,
+    "function-paren-newline": ["warn", "consistent"],
     "import/extensions": 0,
     "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": 0,
@@ -47,7 +48,7 @@
       "warn",
       {
         "multiline": true,
-        "minProperties": 3
+        "minProperties": 4
       }
     ]
   }
