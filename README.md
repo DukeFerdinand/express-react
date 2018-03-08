@@ -2,7 +2,7 @@
 
 #### This is a VERY simple boilerplate I setup to save a bit of time with Webpack and ESLint. Doesn't contain _too_ much bloated 'demo app' garbage, so it's pretty easy to get going.
 
-Contains the following packages:
+Mostly based on these libraries:
 * Express
 * React
 * Redux/Redux-Saga
