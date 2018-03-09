@@ -2,11 +2,13 @@ import axios from 'axios'
 import { takeLatest, put } from 'redux-saga/effects'
 
 import { actionTypes } from '@actions/types'
+import { createNote } from './notes'
 
 const {
   API_TEST_REQUEST,
   API_TEST_SUCCESS,
-  API_TEST_FAILURE
+  API_TEST_FAILURE,
+  CREATE_NOTE_REQUEST
 } = actionTypes
 
 function* makeApiRequest() {
@@ -29,4 +31,5 @@ function* makeApiRequest() {
 
 export function* rootSaga() {
   yield takeLatest(API_TEST_REQUEST, makeApiRequest)
+  yield takeLatest(CREATE_NOTE_REQUEST, createNote)
 }
