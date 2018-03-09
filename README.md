@@ -1,20 +1,23 @@
-## Express-React Boilerplate
+## MERN Boilerplate
 
-#### This is a VERY simple boilerplate I setup to save a bit of time with Webpack and ESLint. Doesn't contain _too_ much bloated 'demo app' garbage, so it's pretty easy to get going.
+#### This is a simple boilerplate I setup to save a bit of time with Webpack and ESLint. Sets up Express, Mongo, and a basic React app with a Redux store. The Redux store uses the Redux-Saga middleware to ping the database.
 
 Mostly based on these libraries:
 * Express
+* Mongoose (for mongodb)
 * React
 * Redux/Redux-Saga
 * axios
 
 Planned features:
-* MongoDB connection
 * Webpack build system
 
-Uses `webpack-dev-server` for development, `babel` for the build tool, and `eslint` for the linter (linting is very subjective, but I've included my personal `.eslintrc` based on the `airbnb` packages if you need one and don't mind).
+Uses `webpack` and `babel` for the build tools, and `eslint` for the linter. Linting is very subjective, but I've included my personal `.eslintrc` based on the `airbnb` packages if you need one and don't mind.
 
-### How to run:
+### How to run: 
+  1. You WILL need MongoDB installed to use this application.
+      * `mongod` to start, or `mongodb` if it's already running
+      * If you DON'T have MongoDB installed, please see [here](https://www.mongodb.com/download-center?jmp=tutorials#community)
   1. Make sure you have `node`, `npm` or `yarn`, and `nodemon` installed.
       * `$ node -v` etc.
   2. Install dependencies
@@ -25,4 +28,4 @@ Uses `webpack-dev-server` for development, `babel` for the build tool, and `esli
 
 ### Creating a production build
 
-While there's no production-optimized build command/webpack config quite yet, you _can_ run `yarn build` or `npm run build` to get a `bundle.js` put into `YOUR_APP_DIR/dist/public/assets` and then configure the express server to send the `index.html` in that same `YOUR_APP_DIR/dist/public/` folder using a `res.sendFile()`. **NOTE:** This _is_ a planned feature, I just haven't implemented it quite yet.
+There's no production-optimized build command/webpack config quite yet :( Make a PR if you set one up!
