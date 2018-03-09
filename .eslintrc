@@ -27,6 +27,8 @@
       "error",
       "as-needed"
     ],
+    "react/jsx-first-prop-new-line": "off",
+    "react/jsx-max-props-per-line": ["error", { "maximum": 2, "when": "multiline" }],
     "react/jsx-filename-extension": 0,
     "react/require-default-props": [
       1,
