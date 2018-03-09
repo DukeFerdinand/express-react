@@ -1,14 +1,30 @@
 const express = require('express')
 const path = require('path')
-const cors = require('cors')
+
+const { db } = require('./server/db/index')
+const { Note } = require('./server/db/models/Note')
 
 const app = express()
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(cors())
 
 app.get('/api', (req, res) => {
   res.send({ msg: 'Hello from your API!' })
+})
+
+app.post('/api/new/note', (req, res) => {
+  const newNote = new Note({
+    msg: req.body.msg
+  })
+  newNote.save((err) => {
+    if (err) return err
+    const notes = Note.find().exec((err, notes) => {
+      console.log(notes)
+      res.send(notes)
+    })
+  })
 })
 
 app.get('/*', (req, res) => {
