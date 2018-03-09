@@ -41,9 +41,11 @@ class App extends Component {
               this.setState({ note: e.target.value })
             }}
           />
-          <button onClick={() => {
-            createNoteRequest(this.state.note)
-            this.setState({ note: '' })
+          <button disabled={!this.state.note} onClick={() => {
+            if (this.state.note) {
+              createNoteRequest(this.state.note)
+              this.setState({ note: '' })
+            }
           }}
           >Submit
           </button>
