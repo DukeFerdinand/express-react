@@ -8,7 +8,7 @@
     "client": "webpack --watch --display-error-details",
     "build": "webpack",
     "server": "nodemon index.js",
-    "app": "run-p -cln client server"
+    "start": "run-p -cln client server"
   },
   "dependencies": {
     "axios": "^0.18.0",
