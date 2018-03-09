@@ -2,11 +2,13 @@ import { createStore, applyMiddleware, combineReducers } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 
 import { apiTest } from '@reducers/apiTest'
+import { noteReducer } from '@reducers/noteReducer'
 import { rootSaga } from '@sagas/index'
 
 // Dealing with our Reducers
 const reducers = combineReducers({
-  apiTest
+  apiTest,
+  noteReducer
 })
 
 // Using the Saga middleware
