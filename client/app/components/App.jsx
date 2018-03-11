@@ -59,7 +59,7 @@ App.propTypes = {
   msg: PropTypes.string,
   testApiRequest: PropTypes.func,
   createNoteRequest: PropTypes.func,
-  notes: PropTypes.arrayOf({}),
+  notes: PropTypes.arrayOf(PropTypes.object),
 }
 
 const mapStateToProps = (state) => {
