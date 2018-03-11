@@ -2,6 +2,13 @@
 
 #### This is a simple boilerplate I setup to save a bit of time with Webpack and ESLint. Sets up Express, Mongo, and a basic React app with a Redux store. The Redux store uses the Redux-Saga middleware to ping the database.
 
+
+#### I tried to set this up with minimal bloated crap so you don't have _too_ much to take out before getting on with your application. 
+
+#### Happy Coding! :)
+
+### Features
+
 Mostly based on these libraries:
 * Express
 * Mongoose (for mongodb)
@@ -10,7 +17,7 @@ Mostly based on these libraries:
 * axios
 
 Planned features:
-* Webpack build system
+* Webpack build system (feel free to PR if you want to make one sooner than I do)
 
 Uses `webpack` and `babel` for the build tools, and `eslint` for the linter. Linting is very subjective, but I've included my personal `.eslintrc` based on the `airbnb` packages if you need one and don't mind.
 
