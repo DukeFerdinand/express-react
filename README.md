@@ -23,7 +23,7 @@ Uses `webpack` and `babel` for the build tools, and `eslint` for the linter. Lin
   2. Install dependencies
       * `$ (yarn or npm) install`
   3. Run the dev server
-      * `$ yarn app` or `$ npm run app`
+      * `$ yarn start` or `$ npm run start`
       * Open your browser to http://localhost:3000/ to see the client. **NOTE:** to see an example API response, go to http://localhost:3000/api. This is also visible on the root route in the client as `Hello from your API!`
 
 ### Creating a production build
